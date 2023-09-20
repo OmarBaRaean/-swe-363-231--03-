@@ -1,7 +1,14 @@
 body{
+    font-size: 16px;
+    font-family: inherit;
     background-color: black;
     
 }
+h1{
+    text-transform: capitalize;
+    
+}
+
 
 html{
     color: aliceblue;

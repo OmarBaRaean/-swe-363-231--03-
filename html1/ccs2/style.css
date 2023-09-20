@@ -1,0 +1,87 @@
+th {
+    text-transform: uppercase;
+  }
+
+  a {
+    color: green;
+  }
+  td.top {
+    background-color: #FFD700;
+  }
+  p em {
+    background-color: blue;
+  }
+  #the_most_important {
+    text-transform: uppercase;
+    background-color: gold;
+  }
+
+
+  h2 {
+    font-family: sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+  }
+
+  h2 + p:first-letter {
+    font-size: x-large;
+  }
+
+  tr:hover {
+    background-color: lightblue;
+  }
+  
+  tr:hover td[style*="background-color"] {
+    background-color: lightblue !important;
+  }
+
+  header nav li {
+    display: inline;
+    margin-left: 8px;
+
+  }
+  header nav li:first-child a {
+    text-decoration: underline;
+  }
+  
+  header nav li:not(:first-child) a {
+    text-decoration: none;
+
+  }
+
+  ul {
+    padding:0px;
+  }
+
+   tr:nth-child(even) {
+    background-color: #ed1111;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #44d41c;
+  }
+
+  ::selection {
+    background-color: #f42bae;
+  }
+
+  a:hover {
+    cursor:pointer;
+  }
+body  a:hover {
+    cursor:pointer;
+  }
+
+body  input {
+    height:30px;
+    margin-bottom: 10px;
+  }
+  input:not([type="submit"]){
+    border: 2px solid black;
+  }
+
+  input[name="message"]{
+    height:100px;
+    width: 600px;
+  }
