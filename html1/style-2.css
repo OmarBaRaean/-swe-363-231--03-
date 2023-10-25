@@ -13,7 +13,8 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     height: 24px;
-    margin-right: 0px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
   
   .hamburger span {
@@ -21,6 +22,29 @@ button:hover {
     height: 3px;
     background-color: black;
   }
+  figure{
+    display: block;
+    position: relative;
+    align-items: center;
+  }
+
+  figure img{
+    display: block;
+    margin: 0 auto;
+    
+  }
+  figure div {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: antiquewhite;
+    
+    transform: rotate(45deg);
+    font-size: 2.5rem;
+  }
+ 
+
+
   
   ul {
     display: flex;
