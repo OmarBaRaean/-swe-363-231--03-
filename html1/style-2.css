@@ -61,7 +61,7 @@ button:hover {
     display: none;
   }
   
-  nav:hover ul {
+  .hamburger:hover + ul {
     display: flex;
   }
 

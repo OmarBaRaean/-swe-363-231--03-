@@ -46,12 +46,7 @@
             <span></span>
           </div>
           
-          <ul>
-            <li><a href="exercis1.html">Home</a></li>
-            <li><a href="details.html">details</a></li>
-            <li><a href="hireme.html">hire me</a></li>
-            <li><a href="Contactus.html">Contact us</a></li>
-          </ul>
+    
         </nav>
       
         <address>
@@ -61,15 +56,41 @@
         <p>© 2023 Omar Ba Raean. All rights reserved.</p>
       </footer>
 
+
+                    <!-- js code -->
       <script>
         window.addEventListener("load",hideFun)
+
         function hideFun(event){
           const loader = document.querySelector(".loader")
           loader.classList.add("loader--hide")
-loader.addEventListener("transitionend", () => {
-document.body.removeChild (loader)
+          loader.addEventListener("transitionend", () => {
+          document.body.removeChild (loader)
         })
       }
+
+      let arr= [
+      {name: "home",link: "exercis1.html"},
+      {name: "details",link: "details.html"},
+      {name: "hire me",link: "hireme.html"},
+      {name: "Contact us",link: "Contactus.html"}
+      ]
+      const myUl= document.createElement("ul")
+
+      for(let i=0; i<arr.length; i++){
+
+        let tempLi = document.createElement('li');
+        let tempA = document.createElement('a');
+        tempA.href = arr[i].link;
+        tempA.textContent = arr[i].name;
+        tempLi.appendChild(tempA);
+        myUl.appendChild(tempLi)
+      }
+      
+
+      const myNav = document.querySelector("footer nav")
+   
+      myNav.append(myUl)
         
       </script>
 </body>
