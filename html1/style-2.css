@@ -36,7 +36,7 @@ button:hover {
   figure div {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 40%;
     color: antiquewhite;
     
     transform: rotate(45deg);
