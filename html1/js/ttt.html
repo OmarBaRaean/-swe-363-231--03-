@@ -113,6 +113,13 @@
 
             const cellElements = document.getElementsByClassName('cell')
 
+            const XYarr=[   [0,1,2],
+                            [3,4,5],
+                            [6,7,8]
+                        ]
+
+            let keyboardOn=true
+
             const WINNING_COMBINATIONS = [
                     [0, 1, 2],[3, 4, 5],[6, 7, 8],
 
@@ -127,9 +134,58 @@
             let board = document.getElementsByClassName("board")[0]
             board.addEventListener("click", cellClicked)
 
-            function cellClicked(event) {
-                let cell = event.target
 
+            let x=0 ,y=0
+
+            document.body.addEventListener("keydown", (ev) => {
+                keyboardOn=true
+                cellElements[XYarr[y][x]].style.backgroundColor="beige"
+                if (ev.key==="ArrowLeft"){
+                    if(x>0){
+                        x--
+                    }
+
+                 }else if (ev.key==="ArrowRight"){
+                    if (x<2){
+                        x++
+                    }
+                 }else if (ev.key==="ArrowUp"){
+                    if(y>0){
+                        y--
+                    }
+                 }else if (ev.key==="ArrowDown"){
+                    if (y<2){
+                        y++
+                    }
+                 }
+                cell=cellElements[XYarr[y][x]]
+
+                cell.style.backgroundColor="blanchedalmond"
+
+                if (ev.key==="Enter"){
+                    updatecell(cell)
+                }
+
+                })
+
+                document.body.addEventListener('mousemove', (event) => {
+                   if(keyboardOn){ 
+                    cellElements[XYarr[y][x]].style.backgroundColor="beige"
+                    keyboardOn=false
+                }
+                })
+                                     //the hover effect using js 
+                board.addEventListener("mouseover", (e)=>e.target.style.backgroundColor="blanchedalmond")
+                board.addEventListener("mouseout", (e)=>e.target.style.backgroundColor="beige")
+
+
+            function cellClicked(event) {
+               
+                let cell = event.target
+                updatecell(cell)
+            }
+
+            function updatecell(cell){
                 //change the cell only if it is empty 
                 if (cell.innerText==""){
 
@@ -154,15 +210,13 @@
                     } else {
                         // change turn
                         turn = turn === "X" ? "O" : "X"
-    
+
                         //change title
                         turnLetter = document.querySelector("#turn span")
                         turnLetter.innerText = turn
                     }
 
                 }
-
-             
             }
 
             function checkWin(turn) {
