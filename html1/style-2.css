@@ -48,15 +48,14 @@ button:hover {
   
   ul {
     display: flex;
+    flex-wrap: wrap;
   }
   
   ul li {
-    margin-right: 20px;
+    margin-right: 2rem;
   }
   
-  ul li:last-child {
-    margin-right: 0;
-  }
+ 
 
   nav ul {
     display: none;
