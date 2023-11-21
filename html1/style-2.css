@@ -3,6 +3,17 @@ button:hover {
   }
 
 
+    
+  
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+
+a:first-of-type{
+  display: flex;
+  justify-content: right;
+}
   nav {
     display: flex;
     align-items: center;
@@ -64,6 +75,14 @@ button:hover {
   .hamburger:hover + ul {
     display: flex;
   }
+  ul:hover{
+    display: flex;
+  }
+  footer> p {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+  }
 
 
   .loader{
@@ -94,6 +113,13 @@ button:hover {
     animation: loading 0.7s ease infinite;
     
   }
+  @media all and (max-width:500px ){
+    body{
+      color: red;
+      font-size: 1.5rem;
+    }
+  }
+
   @keyframes loading {
     from {transform:rotate(0turn) }
     to {transform: rotate(1turn);}
